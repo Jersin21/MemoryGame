@@ -14,7 +14,9 @@ function shuffleArray(array) {
 }
 
 function ContainerCards() {
-  const [pokemonIds, setPokemonIds] = useState([1, 2, 3, 4, 5, 6, 7, 8, 9]);
+  const [pokemonIds, setPokemonIds] = useState([
+    134, 135, 136, 196, 197, 470, 471, 700, 133,
+  ]);
   const [score, setScore] = useState(0);
   const [prevCard, setPrevCard] = useState(null);
   const [highestScore, setHighestScore] = useState(0);
@@ -47,17 +49,11 @@ function ContainerCards() {
       )}
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-3">
         {pokemonIds.map((id) => (
-          <Cards
-            key={id}
-            pokemonId={id}
-            onClick={() => handleCardClick(id)}
-          />
+          <Cards key={id} pokemonId={id} onClick={() => handleCardClick(id)} />
         ))}
       </div>
       <div className="mt-4">
-        <h3 className="text-lg font-bold">
-          Puntaje más alto: {highestScore}
-        </h3>
+        <h3 className="text-lg font-bold">Puntaje más alto: {highestScore}</h3>
       </div>
     </div>
   );
