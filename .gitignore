@@ -1,0 +1,19 @@
+# Node.js / NPM
+node_modules/
+npm-debug.log
+yarn-error.log
+yarn.lock
+
+# Build files
+dist/
+
+# IDE/Editor specific files
+.vscode/
+.idea/
+
+# Local development server files
+vite-plugin-react-jsx/
+
+# Miscellaneous
+*.log
+.DS_Store
